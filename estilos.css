@@ -1,0 +1,266 @@
+/* =============================================================
+   Producto 5 - Hoja de estilos para la transformación del XML
+   Maqueta los datos del adaptador como una tabla legible para
+   un usuario humano, con cabecera, secciones de datos y trazado.
+   ============================================================= */
+
+/* --- Reset suave y tipografía base --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, #eef3fb 0%, #d9e6f7 100%);
+    color: #1f2d3d;
+    min-height: 100vh;
+    line-height: 1.5;
+    padding: 24px;
+}
+
+/* --- Cabecera --- */
+.cabecera {
+    background: linear-gradient(135deg, #1f3b73 0%, #2c5fb8 100%);
+    color: #ffffff;
+    padding: 28px 32px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(31, 59, 115, 0.25);
+    margin-bottom: 24px;
+}
+
+.cabecera h1 {
+    font-size: 1.75rem;
+    margin-bottom: 6px;
+}
+
+.cabecera .subtitulo {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* --- Contenido principal --- */
+.contenido {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.introduccion,
+.resultado {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px 28px;
+    box-shadow: 0 4px 14px rgba(31, 59, 115, 0.12);
+    margin-bottom: 20px;
+}
+
+.introduccion h2 {
+    color: #1f3b73;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #e1e8f2;
+    padding-bottom: 8px;
+}
+
+.introduccion p {
+    margin-bottom: 12px;
+    color: #354b6d;
+}
+
+.introduccion code {
+    background: #eef3fb;
+    color: #1f3b73;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 0.92em;
+}
+
+/* --- Acciones (botones) --- */
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0 8px;
+}
+
+.boton-principal,
+.boton-secundario {
+    border: 0;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 11px 22px;
+    border-radius: 8px;
+    transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.boton-principal {
+    background: #2c5fb8;
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(44, 95, 184, 0.35);
+}
+
+.boton-principal:hover {
+    background: #1f4998;
+    box-shadow: 0 4px 12px rgba(44, 95, 184, 0.45);
+}
+
+.boton-principal:active {
+    transform: translateY(1px);
+}
+
+.boton-secundario {
+    background: #ffffff;
+    color: #2c5fb8;
+    border: 1.5px solid #2c5fb8;
+}
+
+.boton-secundario:hover {
+    background: #eef3fb;
+}
+
+/* --- Mensajes de estado --- */
+.estado {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    min-height: 1.2em;
+    color: #54678a;
+}
+
+.estado.error {
+    color: #b3261e;
+    font-weight: 600;
+}
+
+.estado.ok {
+    color: #1e7a3c;
+    font-weight: 600;
+}
+
+/* --- Secciones del resultado --- */
+.oculto {
+    display: none;
+}
+
+.resultado h2 {
+    color: #1f3b73;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #e1e8f2;
+    padding-bottom: 8px;
+}
+
+.resultado h3 {
+    color: #2c5fb8;
+    font-size: 1.1rem;
+    margin: 18px 0 10px;
+}
+
+.resultado .nombre-adaptador {
+    display: inline-block;
+    background: #1f3b73;
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* --- Tablas de datos (estilo tarjeta) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(31, 59, 115, 0.08);
+}
+
+caption {
+    text-align: left;
+    font-weight: 700;
+    color: #1f3b73;
+    padding: 10px 0;
+    caption-side: top;
+}
+
+thead th {
+    background: #1f3b73;
+    color: #ffffff;
+    text-align: left;
+    padding: 10px 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+tbody th {
+    text-align: left;
+    background: #f4f7fc;
+    color: #1f3b73;
+    width: 38%;
+    padding: 10px 14px;
+    font-weight: 600;
+    border-bottom: 1px solid #e1e8f2;
+}
+
+tbody td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e1e8f2;
+    font-family: "Consolas", "Courier New", monospace;
+    color: #354b6d;
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+tbody tr:hover {
+    background: #f9fbfe;
+}
+
+/* --- Tabla de saltos del trazado --- */
+.tabla-trazado thead th {
+    background: #2c5fb8;
+}
+
+.tabla-trazado tbody td:first-child {
+    width: 80px;
+    font-weight: 700;
+    color: #1f3b73;
+    text-align: center;
+    background: #f4f7fc;
+}
+
+.badge-saltos {
+    display: inline-block;
+    background: #2c5fb8;
+    color: #ffffff;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    margin-left: 6px;
+}
+
+/* --- Pie de página --- */
+.pie {
+    max-width: 960px;
+    margin: 18px auto 0;
+    text-align: center;
+    color: #54678a;
+    font-size: 0.85rem;
+    padding-top: 12px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    body { padding: 12px; }
+    .cabecera { padding: 20px; }
+    .cabecera h1 { font-size: 1.4rem; }
+    .introduccion,
+    .resultado { padding: 16px; }
+    tbody th { width: 45%; }
+}
