@@ -2,46 +2,37 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuración del dispositivo de red - Producto 5</title>
+    <title>Configuración del dispositivo de red</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header class="cabecera">
+    <header>
         <h1>Configuración del dispositivo de red</h1>
-        <p class="subtitulo">Producto 5 &mdash; Transformación de XML mediante CSS y JavaScript</p>
+        <p>Producto 5 - Transformación de XML con CSS y JavaScript</p>
     </header>
 
-    <main class="contenido">
+    <main>
         <section class="introduccion">
             <h2>Acerca de esta página</h2>
             <p>
-                Esta página web muestra la configuración actual del dispositivo de red almacenada en el archivo
-                <code>red.xml</code> generado en el Producto 4. Al pulsar el botón inferior, JavaScript carga
-                el archivo XML, lo procesa y lo presenta formateado con la hoja de estilos
-                <code>estilos.css</code> en un formato legible para el usuario humano.
+                Esta página muestra la configuración del dispositivo de red almacenada en el
+                archivo <strong>red.xml</strong> generado en el Producto 4. Al pulsar el botón,
+                JavaScript carga el XML y lo muestra formateado como tablas con la hoja de
+                estilos <strong>estilos.css</strong>.
             </p>
 
-            <div class="acciones">
-                <button id="btn-cargar" type="button" class="boton-principal">
-                    Cargar configuración del adaptador
-                </button>
-                <button id="btn-archivo" type="button" class="boton-secundario" title="Selecciona manualmente un archivo XML">
-                    Seleccionar archivo XML&hellip;
-                </button>
-                <input type="file" id="input-archivo" accept=".xml,application/xml,text/xml" hidden>
-            </div>
+            <button id="btn-cargar">Cargar configuración del adaptador</button>
+            <button id="btn-archivo">Seleccionar archivo XML...</button>
+            <input type="file" id="input-archivo" accept=".xml" hidden>
 
-            <p id="mensaje-estado" class="estado" role="status" aria-live="polite"></p>
+            <p id="mensaje-estado" class="estado"></p>
         </section>
 
-        <section id="resultado" class="resultado oculto" aria-label="Configuración del adaptador de red">
-            <!-- El contenido se inyecta dinámicamente desde app.js -->
-        </section>
+        <section id="resultado" class="resultado oculto"></section>
     </main>
 
-    <footer class="pie">
-        <p>Pol Valle Montes &middot; FP.440 Programa de comunicación personalizado para sistemas operativos</p>
+    <footer>
+        <p>Pol Valle Montes - FP.440 Programa de comunicación personalizado</p>
     </footer>
 
     <script src="app.js"></script>
